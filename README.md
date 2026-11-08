@@ -65,7 +65,7 @@ python visualize.py    # results/fgsm_examples.png 생성
 - L∞ norm 제약만 다뤘다. training ε를 넘는 공격(ε=0.3)에는 accuracy가 크게 떨어진다.
 - 모델이 작고(conv 6/16 channel) 데이터가 MNIST이므로 결과를 더 큰 모델이나 다른 데이터셋으로 일반화할 수 없다.
 
-## 참고 문헌 (구현한 방법의 출처)
+## 참고 문헌
 
 - Goodfellow, Shlens, Szegedy. *Explaining and Harnessing Adversarial Examples.* ICLR 2015.
 - Madry, Makelov, Schmidt, Tsipras, Vladu. *Towards Deep Learning Models Resistant to Adversarial Attacks.* ICLR 2018.

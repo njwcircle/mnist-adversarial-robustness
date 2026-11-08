@@ -59,7 +59,7 @@
 - 평가 공격이 PGD-40 하나로, 수치는 이 공격에 대한 accuracy이며 어떤 공격을 써도 맞히는 비율(진짜 robust accuracy)의 상한이다.
 - L∞ norm 제약, 작은 CNN, MNIST로 한정된 결과이며 다른 설정으로 일반화할 수 없다.
 
-## 참고 문헌 (구현한 방법의 출처)
+## 참고 문헌
 
 - Goodfellow, Shlens, Szegedy. *Explaining and Harnessing Adversarial Examples.* ICLR 2015.
 - Madry, Makelov, Schmidt, Tsipras, Vladu. *Towards Deep Learning Models Resistant to Adversarial Attacks.* ICLR 2018.
