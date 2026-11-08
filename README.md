@@ -47,7 +47,7 @@ python compare.py      # 비교표와 results/robust_accuracy.png 생성
 python visualize.py    # results/fgsm_examples.png 생성
 ```
 
-`train.py`, `adv_train.py`는 같은 이름의 가중치 파일을 **덮어쓴다.** 다시 학습하면 결과표의 수치도 달라진다. 저장소에는 표를 만든 가중치(`mnist_cnn.pt`, `mnist_cnn_adv.pt`)가 들어 있으므로, `train.py`와 `adv_train.py`를 건너뛰고 `attack.py`, `compare.py`만 실행해도 표를 확인할 수 있다.
+`train.py`, `adv_train.py`는 같은 이름의 가중치 파일을 **덮어쓴다.** 다시 학습하면 결과표의 수치도 달라진다. 저장소에 가중치(`mnist_cnn.pt`, `mnist_cnn_adv.pt`)가 들어 있으므로 `train.py`와 `adv_train.py`를 건너뛰고 `attack.py`, `compare.py`만 실행해도 표를 확인할 수 있다.
 
 ## 구현 요약
 
