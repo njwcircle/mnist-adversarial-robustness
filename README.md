@@ -1,12 +1,13 @@
 # MNIST Adversarial Attack & PGD Adversarial Training
 
-MNIST 분류 CNN에 대해 **FGSM / PGD (L∞)**를 구현하고, **PGD adversarial training**(Madry et al., 2018)으로 방어했을 때 robust accuracy가 어떻게 달라지는지 측정했다. 공격과 방어는 라이브러리 없이 직접 구현했고, CPU에서 실행했다.
+MNIST 분류 CNN에 대해 FGSM / PGD (L∞)를 구현하고, **PGD adversarial training**(Madry et al., 2018)으로 방어했을 때 robust accuracy가 어떻게 달라지는지 측정한다.
 
 ![robust accuracy vs epsilon](results/robust_accuracy.png)
 
 ## 결과 요약
 
-test set: 10,000장 / 평가용 PGD: 40 step(random start, α = 2.5·ε/steps) / 모델별 학습: 각 1회
+- test set: 10,000장 / 평가용 PGD: 40 step(random start, α = 2.5·ε/steps) / 학습용 PGD: 10 step
+- training ε: 0.2 / 모델별 학습: 각 1회
 
 | ε | standard / FGSM | standard / PGD | adv-trained / FGSM | adv-trained / PGD |
 |---|---|-------------|---|-----------------|
@@ -18,7 +19,7 @@ test set: 10,000장 / 평가용 PGD: 40 step(random start, α = 2.5·ε/steps) /
 | 0.25 | 32.7% | 0.3% | 89.2% | 65.3% |
 | 0.3 | 17.7% | 0.0% | 88.8% | 19.5% |
 
-- training ε(0.2)에서 PGD accuracy가 **6.1% → 84.5%** 로 올랐으나, clean accuracy는 **98.4% → 95.7%** 로 낮아졌다.
+- training ε에서 PGD accuracy가 **6.1% → 84.5%** 로 올랐으나, clean accuracy는 **98.4% → 95.7%** 로 낮아졌다.
 - training ε를 넘는 ε=0.3에서 PGD accuracy가 19.5%로 다시 크게 떨어졌다.
 - adv-trained 모델의 FGSM accuracy는 ε=0.2~0.3에서 약 89%로 거의 변하지 않았으나, PGD는 19.5%까지 내려갔다. **이 모델에서는 FGSM 수치를 방어 성능 근거로 쓸 수 없고**, PGD 기준으로만 해석해야 한다 (자세한 내용은 [report.md](report.md)).
 - 위 표는 한 번 학습한 가중치 기준이고 같은 설정으로 다시 학습하면 수치가 달라진다.

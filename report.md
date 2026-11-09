@@ -2,7 +2,7 @@
 
 ## 1. 목적
 
-이미지 분류 모델이 입력의 작은 변화에 얼마나 취약한지 측정하고, adversarial training이 이를 얼마나 완화하는지 확인한다. 공격 알고리즘(FGSM, PGD)과 방어(PGD adversarial training)를 공격 라이브러리 없이 직접 구현했다.
+이미지 분류 모델이 입력의 작은 변화에 얼마나 취약한지 측정하고, adversarial training이 이를 얼마나 완화하는지 확인한다. 공격 알고리즘(FGSM, PGD)과 방어(PGD adversarial training)를 구현한다.
 
 ## 2. 설정
 
