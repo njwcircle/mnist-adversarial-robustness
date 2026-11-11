@@ -6,7 +6,9 @@ MNIST 분류 CNN에 대해 FGSM / PGD (L∞)를 구현하고, **PGD adversarial 
 
 ## 결과 요약
 
-- test set: 10,000장 / 평가용 PGD: 40 step(random start, α = 2.5·ε/steps) / 학습용 PGD: 10 step
+- MNIST (train 60,000 / test 10,000)
+- 평가용 PGD: 40 step(random start, α = 2.5·ε/steps) / 학습용 PGD: 10 step
+- batch size: 64 / 5 epoch (standard) / 10 epoch (adv-trained) / Adam(lr 1e-3)
 - training ε: 0.2 / 모델별 학습: 각 1회
 
 | ε | standard / FGSM | standard / PGD | adv-trained / FGSM | adv-trained / PGD |

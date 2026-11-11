@@ -6,15 +6,15 @@
 
 ## 2. 설정
 
-| 항목 | 내용 |
-|---|---|
-| 데이터 | MNIST (train 60,000 / test 10,000), 픽셀 [0,1], 정규화 없음 |
+| 항목 | 내용                                                                             |
+|---|--------------------------------------------------------------------------------|
+| 데이터 | MNIST (train 60,000 / test 10,000), 픽셀 [0,1], 정규화 없음                           |
 | 모델 | conv(1→6, 3×3) → pool → conv(6→16, 5×5) → pool → fc 256→120→80→10, dropout 0.5 |
-| 학습 | Adam(lr 1e-3), batch 64, 5 epoch (standard) / 10 epoch (adv-trained) |
-| 위협 모델 | white-box, untargeted, L∞ |
-| 공격 | FGSM, PGD(random start, 40 step, α = 2.5·ε/steps) |
-| 방어 | PGD adversarial training, training ε=0.2, 10 step |
-| 평가 | test 10,000장 전체, ε ∈ {0, 0.05, …, 0.3} |
+| 학습 | Adam(lr 1e-3), batch size 64, 5 epoch (standard) / 10 epoch (adv-trained)      |
+| 위협 모델 | white-box, untargeted, L∞                                                      |
+| 공격 | FGSM, PGD(random start, 40 step, α = 2.5·ε/steps)                              |
+| 방어 | PGD adversarial training, training ε=0.2, 10 step                              |
+| 평가 | test 10,000장 전체, ε ∈ {0, 0.05, …, 0.3}                                         |
 
 ## 3. 방법
 
